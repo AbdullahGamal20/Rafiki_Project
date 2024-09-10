@@ -1,0 +1,180 @@
+.GetStartedSwiper .swiper-container .after {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	left: -2%;
+	bottom: 94px;
+	z-index: 200;
+	transition: all 1s ease-in-out;
+}
+.GetStartedSwiper .swiper-nav {
+	left: 0;
+	right: 0;
+}
+.GetStartedSwiper .actorImg {
+	transform: translateY(50px);
+	opacity: 0;
+	transition: all var(--main-transition) ease-in-out;
+}
+.GetStartedSwiper .alumni {
+	background-color: var(--Alumni-color);
+	position: relative;
+}
+.GetStartedSwiper .after {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.GetStartedSwiper .alumni .after {
+	background-color: white;
+	left: -2%;
+	bottom: 94px;
+}
+.GetStartedSwiper .student {
+	background-color: var(--Student-color);
+}
+.GetStartedSwiper .hr {
+	background-color: var(--HR-color);
+}
+
+.GetStartedSwiper .actorName {
+	color: white;
+	font-weight: 600;
+	font-size: 64px;
+}
+.GetStartedSwiper .actorDescription {
+	color: white;
+	font-size: 32px;
+	font-weight: 700;
+}
+.GetStartedSwiper .swiper-pagination {
+	display: flex;
+}
+.pagination-wrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	cursor: pointer;
+	background-color: white;
+	width: 16px;
+	height: 16px;
+}
+.GetStartedSwiper .swiper-button-next::after,
+.GetStartedSwiper .swiper-button-prev::after {
+	display: none;
+}
+.GetStartedSwiper .swiper-button-next,
+.GetStartedSwiper .getStartBtn {
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	display: unset;
+	top: unset;
+	background-color: white;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	color: #222222;
+	font-size: 22px;
+	font-weight: 400;
+	z-index: 55;
+}
+.GetStartedSwiper .swiper-button-prev {
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+	display: unset;
+	top: unset;
+	right: unset;
+	left: unset;
+	color: white;
+	font-size: 40px;
+	margin-top: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.GetStartedSwiper .actorName {
+		color: white;
+		font-weight: 600;
+		font-size: 34px;
+		z-index: 400;
+	}
+	.GetStartedSwiper .actorDescription {
+		color: white;
+		font-size: 15px;
+		font-weight: 500;
+		z-index: 400;
+	}
+	.swiper-pagination-clickable .swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+	}
+	.GetStartedSwiper .swiper-button-next,
+	.GetStartedSwiper .getStartBtn {
+		right: 0;
+		left: auto;
+		bottom: 0;
+		color: #222222;
+		font-size: 12px;
+		font-weight: 400;
+	}
+	.GetStartedSwiper .swiper-button-prev {
+		color: white;
+		font-size: 25px;
+	}
+	.GetStartedSwiper .swiper-container .after {
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		left: -2%;
+		bottom: 80%;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1200px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.GetStartedSwiper .swiper-button-next,
+		.GetStartedSwiper .getStartBtn {
+			right: 0;
+			left: auto;
+			bottom: 0;
+			font-weight: 400;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.GetStartedSwiper .actorName {
+			font-size: 44px;
+		}
+		.GetStartedSwiper .actorDescription {
+			font-size: 25px;
+		}
+		.GetStartedSwiper .swiper-button-next,
+		.GetStartedSwiper .getStartBtn {
+			right: 0;
+			left: auto;
+			bottom: 0;
+			font-weight: 400;
+		}
+	}
+}
+
+/* animations */
+.fade-up {
+	transform: translateY(0) !important;
+	opacity: 1 !important;
+	transition: opacity 0.6s 0.3s ease-in-out, transform 0.9s 0.2s ease-in-out !important;
+}

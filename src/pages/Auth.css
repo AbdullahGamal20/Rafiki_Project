@@ -1,0 +1,280 @@
+.Auth {
+	min-height: 100vh;
+	overflow: hidden;
+}
+.Auth .container-fluid {
+	position: relative;
+}
+.Auth .container-fluid,
+.Auth .container-fluid .row {
+	min-height: inherit;
+}
+.Auth ::selection {
+	color: white;
+}
+.AlumniSignup ::selection {
+	background-color: var(--Alumni-color);
+}
+.HRSignup ::selection {
+	background-color: var(--HR-color);
+}
+.StudentSignup ::selection {
+	background-color: var(--Student-color);
+}
+.AlumniSignup .row > div:nth-child(1) {
+	background-color: var(--Alumni-color);
+}
+.StudentSignup .row > div:nth-child(1) {
+	background-color: var(--Student-color);
+}
+.HRSignup .row > div:nth-child(1) {
+	background-color: var(--HR-color);
+}
+.Login .row > div:nth-child(1) {
+	background-color: var(--primary-color);
+}
+
+.Auth .row > div:nth-of-type(1) img {
+	max-width: 75%;
+	max-height: 75%;
+	animation: up-Down 5s both linear infinite;
+}
+.Auth .row .introText h1 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 35px;
+	text-align: center;
+}
+.Auth .row .introText p {
+	font-size: 16px;
+	text-align: center;
+	font-weight: 800;
+}
+
+.Auth form {
+	position: relative;
+	min-height: 75vh;
+}
+.Login form {
+	position: unset;
+	min-height: unset;
+}
+.Auth form .part1,
+.Auth form .part2 {
+	width: 100%;
+	transition: all var(--main-transition) ease-in-out;
+}
+.Auth form .part2 {
+	display: none;
+}
+.AlumniSignup form .part2,
+.HRSignup form .part2 {
+	top: 90px;
+}
+.StudentSignup form .part2 {
+	top: 69px;
+}
+.Auth form .input-group,
+.Auth.Login form button,
+.Login .toSignup button {
+	border: 2px solid var(--color-tow);
+	border-radius: var(--main-border-radius);
+	z-index: 20;
+}
+@media (max-width: 767px) {
+	.StudentSignup form .input-group {
+		padding: 3px !important;
+		overflow: hidden !important;
+	}
+}
+.Auth form .submit {
+	transition: all var(--main-transition) ease-in-out;
+}
+.Auth.Login form button,
+.Auth.Signup form button {
+	color: #ffffff;
+	font-family: 600;
+	transition: all 0.2s ease-in-out !important;
+}
+.Auth.Signup form .part2 button {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+.Auth.Signup form .part2 button svg {
+	font-size: 15px;
+}
+.AlumniSignup form button {
+	background-color: var(--Alumni-color);
+}
+.StudentSignup form button {
+	background-color: var(--Student-color);
+}
+.HRSignup form button {
+	background-color: var(--HR-color);
+}
+.Login form button,
+.Login .toSignup button {
+	background-color: var(--primary-color);
+	border: 1px solid #23032e !important;
+}
+
+.Login .toSignup button {
+	color: white;
+}
+.Login .toSignup button:hover {
+	opacity: 0.75;
+}
+.Auth.Login form button:hover,
+.Auth.Signup form button:hover {
+	color: #ffffff !important;
+	opacity: 0.75;
+}
+.AlumniSignup form button:hover {
+	background-color: #007e9e !important;
+}
+.StudentSignup form button:hover {
+	background-color: #12685d !important;
+}
+.HRSignup form button:hover {
+	background-color: #2b6f85 !important;
+}
+.Login form button:hover {
+	background-color: var(--primary-color-shade1);
+}
+.Login .rightPart {
+	background-color: var(--secondary-bg-color);
+}
+.Auth form .error {
+	margin-left: 1em;
+	z-index: 10;
+	opacity: 1;
+	transition: all var(--main-transition) ease-in-out;
+}
+.AlumniSignup form .error {
+	color: var(--Alumni-color);
+}
+.StudentSignup form .error {
+	color: var(--Student-color);
+	font-size: 1em;
+}
+@media (max-width: 767px) {
+	.StudentSignup form .error {
+		font-size: 0.75em;
+	}
+}
+.HRSignup form .error {
+	color: var(--HR-color);
+}
+.Auth form .input-group span {
+	background: transparent;
+	border: none;
+}
+.Auth form .input-group span img {
+	height: 22px;
+	width: 22px;
+	cursor: pointer;
+}
+.Auth form .input-group input {
+	border: none;
+}
+.AlumniSignup form .input-group input {
+	caret-color: var(--Alumni-color);
+}
+.StudentSignup form .input-group input {
+	caret-color: var(--Student-color);
+}
+.HRSignup form .input-group input {
+	caret-color: var(--HR-color);
+}
+.Auth form .input-group input:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none;
+}
+.Auth form .input-group input::placeholder {
+	opacity: 1;
+	transition: all var(--main-transition) ease-in-out;
+}
+.Auth form .input-group input:focus::placeholder {
+	opacity: 0;
+}
+.Login .ForgetPass {
+	color: black;
+}
+.Login .forgetPass a {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+@keyframes up-Down {
+	0% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
+
+/* login in session (page)*/
+.sessionLogin {
+	background: #6190e8;
+	background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8);
+	background: linear-gradient(to right, #a7bfe8, #6190e8);
+}
+.sessionLogin .container .main {
+	min-height: 100vh;
+}
+.sessionLogin .profileImg {
+	width: 200px;
+	height: 200px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 97px;
+	color: #392e67;
+}
+.sessionLogin .profileImg img {
+	min-height: 100%;
+}
+.sessionLogin .name {
+	font-size: 3em;
+	font-weight: 600;
+	color: #392e67;
+	min-width: 400px;
+}
+.sessionLogin .loginBtn {
+	background-color: #dfdde5;
+}
+.sessionLogin .createNew a {
+	color: #392e67;
+	font-size: 1em;
+	font-weight: 500;
+	text-decoration: none;
+}
+/* Mobile Styles */
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.sessionLogin .name {
+		font-size: 2.5em;
+		min-width: 100%;
+	}
+	.sessionLogin .userInfoContainer {
+		width: 75%;
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}

@@ -1,0 +1,57 @@
+.ApplyJobLayout {
+	height: calc(100vh - 90px);
+	background-color: transparent;
+}
+
+.ApplyJobLayout .jobCards,
+.ApplyJobLayout .jobDetail {
+	height: 80vh;
+	background-color: white;
+	overflow-y: scroll;
+	border-radius: var(--main-border-radius);
+}
+
+.ApplyJobLayout .jobCards::-webkit-scrollbar,
+.ApplyJobLayout .jobDetail::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+.ApplyJobLayout .skillList span {
+	position: relative;
+	font-size: 14px;
+}
+.ApplyJobLayout .skillList span:not(:last-child):after {
+	position: absolute;
+	content: "";
+	width: 4px;
+	height: 4px;
+	right: 0;
+	border-radius: 50%;
+	background-color: #66646d;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.ApplyJobLayout .outlet {
+		position: absolute;
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+	.ApplyJobLayout .outlet {
+		z-index: 1 !important;
+	}
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+	.ApplyJobLayout .outlet {
+		position: absolute;
+	}
+}

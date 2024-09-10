@@ -1,0 +1,320 @@
+:root {
+	--sideBar-width: 255px;
+}
+
+/* General  */
+.Dashboard {
+	background-color: var(--primary-color);
+}
+.Dashboard a {
+	text-decoration: none;
+}
+.Dashboard .burgerIcon {
+	position: relative;
+	width: 35px;
+	height: 28px;
+	cursor: pointer;
+	transition: all ease-in-out var(--main-transition);
+}
+.Dashboard .burgerIcon div {
+	position: absolute;
+	height: 2px;
+	background-color: white;
+	z-index: 200;
+	border-radius: 10px;
+	left: 0;
+	transition: all ease-in-out 0.2s;
+}
+
+.Dashboard .burgerIcon div:nth-child(1) {
+	transform: rotate(45deg);
+	top: 5px;
+	width: 39%;
+	left: 22px;
+}
+.Dashboard .burgerIcon div:nth-child(2) {
+	width: 62%;
+	left: 13px;
+	top: 10px;
+}
+.Dashboard .burgerIcon div:nth-child(3) {
+	transform: rotate(-45deg);
+	top: 15px;
+	width: 39%;
+	left: 22px;
+}
+.Dashboard .burgerIcon.open div:nth-child(1) {
+	top: 0;
+	transform: rotate(0deg);
+	width: 75%;
+	left: 0;
+}
+
+.Dashboard .burgerIcon.open div:nth-child(2) {
+	top: 10px;
+	transform: rotate(0deg);
+	width: 100%;
+	left: 0;
+}
+
+.Dashboard .burgerIcon.open div:nth-child(3) {
+	top: 20px;
+	transform: rotate(0deg);
+	width: 75%;
+	left: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.Dashboard .burgerIcon div:nth-child(1) {
+		width: 48%;
+	}
+	.Dashboard .burgerIcon div:nth-child(2) {
+		width: 60%;
+	}
+	.Dashboard .burgerIcon div:nth-child(3) {
+		width: 48%;
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}
+/* Nav  */
+.Dashboard .nav {
+	position: fixed;
+	height: fit-content;
+	width: inherit;
+	background-color: var(--primary-color);
+	top: 0;
+	right: 0;
+	width: calc(100% - (64px + 1rem));
+	transition: all ease-in-out var(--main-transition);
+	z-index: 250;
+}
+.Dashboard .dashboard-wrapper.sidebar-open .nav {
+	width: calc(100% - var(--sideBar-width));
+}
+.Dashboard .logo {
+	display: block;
+	height: 50px !important;
+}
+.Dashboard .nav .profileImage {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	color: var(--primary-color);
+	font-size: 25px;
+	background-color: var(--primary-color-shade7);
+}
+.Dashboard .nav .notification {
+	color: var(--primary-color-shade7);
+	font-size: 10px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Dashboard .nav .MuiBadge-badge {
+	background-color: #ff4d4d;
+	color: var(--primary-color-shade7);
+}
+.Dashboard .nav .notification:hover {
+	animation: headShake;
+	animation-duration: 0.7s;
+}
+.Dashboard .nav .username h2 {
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.Dashboard .nav .username:hover .icon {
+	animation: headShake;
+	animation-duration: 0.5s;
+}
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.Dashboard .nav {
+		width: 100%;
+	}
+	.Dashboard .dashboard-wrapper.sidebar-open .nav {
+		width: calc(100% - (53px + 1rem));
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}
+/* Slider */
+.Dashboard .sidebar {
+	transition: all ease-in-out var(--main-transition);
+	position: fixed;
+	height: 100%; /* Take full height of the viewport */
+	overflow-y: auto; /* Allow scrolling for the sidebar */
+	background-color: var(--primary-color);
+	top: 0;
+	left: 0;
+	z-index: 400; /* Make sure sidebar and nav are above content */
+	width: 80px;
+}
+.Dashboard .sidebar.open {
+	width: var(--sideBar-width);
+}
+.Dashboard .sidebar-container {
+	border-top-right-radius: var(--large-border-radius);
+	border-bottom-right-radius: var(--large-border-radius);
+	background-color: var(--primary-color);
+	height: 100%;
+	transition: all var(--main-transition) var(--main-transition) ease-in-out;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+}
+.Dashboard .sidebar .sidebar-container .logo {
+	height: 114px !important;
+	transition: all ease-in-out var(--main-transition);
+	margin-bottom: 20px;
+}
+.Dashboard .sidebar:not(.open) .sidebar-container .logo {
+	height: 46px !important;
+}
+.Dashboard .sidebar .sidebarTrigger {
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+}
+.Dashboard .sidebar .sidebarList {
+	list-style: none;
+}
+.Dashboard .sidebar .sidebarList.close {
+	padding: 0;
+}
+.Dashboard .sidebar .sidebarList .icon {
+	font-size: 15px;
+}
+.Dashboard .sidebarList li {
+	transition: all ease-in-out var(--main-transition);
+	font-size: 18px;
+	color: #979797;
+	cursor: pointer;
+}
+.Dashboard .sidebarList.close li .icon {
+	font-size: 20px;
+}
+.Dashboard .sidebar .sidebarList li.active {
+	color: white;
+	position: relative;
+}
+.Dashboard .sidebar .sidebarList:not(.close) li.active::after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	right: 0;
+	border-radius: 50%;
+}
+.Dashboard .logout {
+	bottom: 29px;
+	color: white;
+	font-size: 25px;
+	transition: all ease-in-out var(--main-transition);
+	cursor: pointer;
+}
+.Dashboard .sidebar:not(.open) .logout {
+	font-size: 20px !important;
+}
+
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.Dashboard .sidebar {
+		left: -100%;
+	}
+	.Dashboard .sidebar.open {
+		width: 100%;
+		left: 0;
+	}
+	.Dashboard .sidebar .sidebar-container .logo {
+		height: 58px !important;
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}
+
+/* content */
+.Dashboard .dashboard-wrapper {
+	padding-left: calc(53px + 1rem);
+	transition: all ease-in-out var(--main-transition);
+}
+.Dashboard .dashboard-wrapper.sidebar-open {
+	padding-left: var(--sideBar-width);
+}
+.Dashboard .content {
+	padding-top: 66px;
+	height: calc(100vh);
+	overflow-y: scroll;
+}
+.Dashboard .content::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+.Dashboard .content-container {
+	background-color: var(--primary-bg-color);
+	height: fit-content;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding: 10px;
+	min-height: 91vh;
+}
+.Dashboard .dashboard-wrapper.sidebar-open .content-container {
+	border-top-left-radius: 20px;
+}
+
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.Dashboard .dashboard-wrapper {
+		padding-left: 0;
+	}
+	.Dashboard .dashboard-wrapper.sidebar-open {
+		padding-left: calc(53px + 1rem);
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}

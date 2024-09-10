@@ -1,0 +1,53 @@
+.progress-bar {
+	height: 5px;
+	border-radius: 20px;
+}
+.AlumniProfile .progress-bar {
+	background-color: var(--Alumni-color);
+}
+.StudentProfile .progress-bar {
+	background-color: var(--Student-color);
+}
+.HRProfile .progress-bar {
+	background-color: var(--HR-color);
+}
+.ProfessorProfile .progress-bar {
+	background-color: var(--Professor-color);
+}
+.AdminProfile .progress-bar {
+	background-color: var(--Admin-color);
+}
+.progress {
+	height: 100%;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: white;
+	width: 90%;
+	transition: all var(--main-transition) ease-in-out;
+}
+.Auth .progress-bar {
+	position: fixed;
+	width: 98%;
+	bottom: 0;
+	margin-bottom: 10px !important;
+}
+/* Add media query for mobile devices */
+@media (max-width: 767px) {
+	.Auth .progress-bar {
+		margin-bottom: 10px !important;
+		width: 93% !important;
+	}
+}
+
+.StudentSignup .progress-bar {
+	background-color: #12685d;
+}
+.HRSignup .progress-bar {
+	background-color: #2b6f85;
+}
+.StudentSignup .progress-bar .progress {
+	background-color: var(--Student-color);
+}
+.HRSignup .progress-bar .progress {
+	background-color: var(--HR-color);
+}

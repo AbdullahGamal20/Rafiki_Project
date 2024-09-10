@@ -1,0 +1,71 @@
+.ApplyJobLayout .jobCard.active {
+	background-color: var(--primary-color);
+}
+.ApplyJobLayout .jobCard .row {
+	transition: all ease-in-out var(--main-transition);
+	border-radius: var(--main-border-radius);
+}
+.ApplyJobLayout .jobCard:hover > .row {
+	background-color: rgba(57, 46, 103, 0.28);
+	cursor: pointer;
+}
+.ApplyJobLayout .jobCard .jobInfo .jobTitle {
+	font-weight: 400;
+	color: var(--primary-color);
+}
+.ApplyJobLayout .jobCard .jobInfo .companyName {
+	font-weight: 400;
+	color: black;
+	font-size: 16px;
+}
+.ApplyJobLayout .jobCard.active .jobInfo .jobTitle,
+.ApplyJobLayout .jobCard.active .jobInfo .save {
+	color: white;
+}
+.ApplyJobLayout .jobCard.active .jobInfo .companyLocation,
+.ApplyJobLayout .jobCard.active .jobInfo .skillList,
+.ApplyJobLayout .jobCard.active .jobInfo .skillList span {
+	color: #ffffff7a !important;
+}
+.ApplyJobLayout .jobCard.active .jobInfo .companyName {
+	color: white;
+}
+.ApplyJobLayout .jobCard .companyLogo {
+	width: 75px;
+	height: 75px;
+	border-radius: var(--main-border-radius);
+	background-color: var(--primary-color-shade1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ApplyJobLayout .jobCard .skillList {
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden; /* Hide overflowed content */
+	text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+	/* Your CSS styles for mobile devices here */
+	.ApplyJobLayout .jobCard .jobInfo .jobTitle {
+		font-size: 18px;
+	}
+	.ApplyJobLayout .jobCard .jobInfo .companyName {
+		font-size: 12px;
+	}
+	.ApplyJobLayout .jobCard .companyLogo {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+/* iPad Landscape Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	/* Your CSS styles for iPad in landscape orientation here */
+}
+
+/* iPad Portrait Styles */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+	/* Your CSS styles for iPad in portrait orientation here */
+}

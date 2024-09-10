@@ -1,0 +1,70 @@
+/* General  */
+.ResetPass {
+	background-color: var(--primary-color);
+}
+.ResetPass .logo {
+	height: 197px !important;
+}
+.ResetPass .backBtn {
+	color: white;
+}
+.ResetPass .backBtnMobile {
+	top: 0;
+	left: 20px;
+	z-index: 555;
+}
+.ResetPass form {
+	min-height: initial;
+}
+.ResetPass form .submit button {
+	color: white;
+	font-family: 600;
+	transition: all 0.2s ease-in-out !important;
+	margin-bottom: initial;
+	border-radius: var(--main-border-radius);
+}
+
+.ResetPass form .submit button {
+	background-color: var(--primary-color);
+	border: initial;
+}
+/* Left Side  */
+.ResetPass .leftSide img {
+	max-width: initial !important;
+	max-height: initial !important;
+	animation: up-Down 5s both linear infinite;
+}
+
+/* Right Side */
+.ResetPass .rightSide {
+	background-color: white;
+	border-top-left-radius: var(--large-border-radius);
+	border-bottom-left-radius: var(--large-border-radius);
+}
+.ResetPass .rightSide .introText h1 {
+	font-size: 55px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
+.ResetPass .rightSide .introText p {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+/* Reset Pass Email */
+.ResetPass .ResetPassEmail .email {
+	border: 2px var(--primary-color) var(--main-border-radius) solid;
+}
+@media (max-width: 767px) {
+	.ResetPass .ResetPassEmail form button {
+		width: 75% !important;
+	}
+	/* CSS for mobile devices */
+
+	.ResetPass .resetPassAnimation {
+		height: 200px !important; /* Set the height to 150px for mobile */
+	}
+}
+
+/* Create New Password */

@@ -1,0 +1,602 @@
+/* Profile in general */
+.profile {
+	min-height: 100vh;
+}
+.profile .profile-overlay {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 0;
+	top: 0;
+	z-index: -1;
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+	z-index: -1;
+	transition: all 0.5s 0.2s ease-in-out !important;
+}
+.profile .backToProfile {
+	position: absolute;
+	top: -32px;
+	right: 0px;
+	transition: all var(--main-transition) ease-in-out;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}
+.profile .backToProfile .icon {
+	color: #292d32;
+}
+
+.AlumniProfile .profile-overlay {
+	background-color: var(--Alumni-color);
+}
+.StudentProfile .profile-overlay {
+	background-color: var(--Student-color);
+}
+.HRProfile .profile-overlay {
+	background-color: var(--HR-color);
+}
+.AdminProfile .profile-overlay {
+	background-color: var(--Admin-color);
+}
+.ProfessorProfile .profile-overlay {
+	background-color: var(--Professor-color);
+}
+.profile ::selection {
+	color: white;
+}
+.profileInfoContainer {
+	transform: translateY(50px);
+}
+.AlumniProfile ::selection {
+	background-color: var(--Alumni-color);
+}
+.HRProfile ::selection {
+	background-color: var(--HR-color);
+}
+.StudentProfile ::selection {
+	background-color: var(--Student-color);
+}
+.AdminProfile ::selection {
+	background-color: var(--Admin-color);
+}
+.ProfessorProfile ::selection {
+	background-color: var(--Professor-color);
+}
+.form-control:focus {
+	box-shadow: none;
+}
+/* ---  */
+
+/* Profile img and general info  */
+.profile .logo {
+	position: absolute;
+	top: 8px;
+}
+.profile .username,
+.profile .fullName {
+	color: white !important;
+}
+.profile .name {
+	font-size: 48px;
+	font-weight: 600;
+}
+.profile .ProfileImg {
+	display: flex;
+	position: relative;
+	background-color: #e4e4e4;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #000000;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+.profile .ProfileImg .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e3f2fd59;
+}
+.profile .ProfileImg .label {
+	bottom: -8px;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	font-size: 21px;
+	color: white;
+}
+.AlumniProfile .ProfileImg .label {
+	background: var(--Alumni-color);
+}
+.HRProfile .ProfileImg .label {
+	background: var(--HR-color);
+}
+.StudentProfile .ProfileImg .label {
+	background: var(--Student-color);
+}
+.AdminProfile .ProfileImg .label {
+	background: var(--Admin-color);
+}
+.ProfessorProfile .ProfileImg .label {
+	background: var(--Professor-color);
+}
+.profile .ProfileImg .userImg,
+.profile .imgContainer .editImg {
+	transition: all var(--main-transition) ease-in-out;
+}
+.profile .ProfileImg .userImg {
+	font-size: 5em;
+}
+.profile .imgContainer .editImg {
+	width: 29px;
+	height: 29px;
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	border: black 1px solid;
+	font-size: 12px;
+	bottom: 0;
+	right: 6px;
+	cursor: pointer;
+}
+.profile .imgContainer:hover .ProfileImg .userImg {
+	opacity: 0.75;
+}
+.profile .sec-title .add {
+	right: 27px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.profile .sec-title .del {
+	right: 56px;
+	font-size: 20px;
+	cursor: pointer;
+}
+@media (max-width: 767px) {
+	.profile .ProfileImg {
+		margin: auto;
+		width: 130px;
+		height: 130px;
+	}
+	.profile .ProfileImg i {
+		font-size: 1em;
+	}
+	.profile .name {
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	.profile .username,
+	.profile .fullName {
+		color: black !important;
+	}
+	.profile .jobTitle {
+		color: black !important;
+		opacity: 50%;
+	}
+}
+/* ---  */
+
+/* generate cv btns  */
+.profile .GenerateCV {
+	border-radius: 22px;
+	color: white;
+	border: 1px solid black;
+	margin-right: 5px;
+}
+.profile .GenerateCV {
+	background-color: #39b581;
+}
+@media (max-width: 767px) {
+	.profile .GenerateCV {
+		margin-top: 20px;
+		width: 70%;
+	}
+}
+/* ---  */
+
+/* profile sections in general  */
+.profile .sec {
+	border: 1px solid #000000;
+	border-radius: var(--main-border-radius);
+	margin: 20px 0px;
+	width: 100%;
+	padding: 19px;
+	min-height: calc(100% - 20px);
+	background-color: white;
+}
+.profile .sec .visibility {
+	cursor: pointer;
+}
+.profile .sec .sec-title {
+	border-bottom: 1px solid;
+	font-size: 30px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 10px;
+}
+.profile .sec.ProfileCV .sec-title {
+	border: none;
+}
+.profile .sec .sec-title .visibility {
+	right: 0;
+	font-size: 20px;
+}
+.profile .sec .sec-title .icon {
+	font-size: 20px;
+}
+.profile .empty-sec,
+.profile .not-empty-sec {
+	padding: 28px 9px;
+}
+.profile .empty-sec .add {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	opacity: 0;
+	transition: all var(--main-transition);
+}
+.profile .empty-sec .add .addIcon {
+	font-size: 2em;
+}
+.profile .empty-sec .add h1 {
+	font-size: 30px;
+}
+.profile .empty {
+	transition: all var(--main-transition) ease-in-out;
+	cursor: pointer;
+}
+.profile .empty:hover {
+	background-color: #cbcacad3;
+}
+.profile .empty:hover .add {
+	opacity: 1;
+}
+.profile .empty-sec .sec-placeholder,
+.profile .empty-sec .skill-placeholder {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.profile .empty-sec .skill-placeholder span {
+	display: inline-block;
+	background-color: #c9c8c8;
+	width: 60px;
+	height: 20px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.profile .empty-sec .sec-placeholder span:nth-of-type(1) {
+	display: inline-block;
+	background-color: #c9c8c8;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+}
+.profile .empty-sec .sec-placeholder span:nth-of-type(2) {
+	display: inline-block;
+	width: 112px;
+	height: 13px;
+	background-color: #c9c8c8;
+	margin-left: 10px;
+}
+.profile .empty-sec .sec-placeholder-2 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	flex-direction: column;
+	align-items: start;
+}
+.profile .empty-sec .sec-placeholder-2 span,
+.profile .empty-sec .sec-placeholder-2 .half {
+	display: inline-block;
+	background-color: #c9c8c8;
+	width: 90%;
+	height: 17px;
+	border-radius: 0;
+	margin-bottom: 10px;
+}
+.profile .empty-sec .sec-placeholder-2 .half {
+	width: 35% !important;
+}
+/* ---  */
+
+/* Profile URLs section  */
+.ProfileURLs .form-control:focus {
+	border-color: #7066e0 !important;
+}
+.ProfileURLs .deleteUrl {
+	transition: all var(--main-transition) ease-in-out;
+	cursor: pointer;
+}
+.AlumniProfile .ProfileURLs .deleteUrl:hover {
+	color: var(--Alumni-color);
+}
+.StudentProfile .ProfileURLs .deleteUrl:hover {
+	color: var(--Student-color);
+}
+.HRProfile .ProfileURLs .deleteUrl:hover {
+	color: var(--HR-color);
+}
+.ProfessorProfile .ProfileURLs .deleteUrl:hover {
+	color: var(--Professor-color);
+}
+.ProfileURLs .url-list {
+	list-style: none;
+}
+.ProfileURLs .url-list a {
+	font-size: 24px;
+	text-decoration: none;
+	color: black;
+	transition: all var(--main-transition) ease-in-out;
+}
+.AlumniProfile .url-list a:hover {
+	color: var(--Alumni-color);
+}
+.HRProfile .url-list a:hover {
+	color: var(--HR-color);
+}
+.StudentProfile .url-list a:hover {
+	color: var(--Student-color);
+}
+.AdminProfile .url-list a:hover {
+	color: var(--Admin-color);
+}
+.ProfessorProfile .url-list a:hover {
+	color: var(--Professor-color);
+}
+.ProfileURLs .url-list li .icon {
+	margin-right: 10px;
+	font-size: 20px;
+}
+.ProfileURLs .url-list li .linkedin {
+	color: #0077b5;
+}
+.ProfileURLs .url-list li .github {
+	color: #171515;
+}
+.ProfileURLs .url-list li .behance {
+	color: #1769ff;
+}
+
+/* ---  */
+
+/* Profile contact info  */
+.profile .ProfileContactInfo .not-empty-sec h1,
+.profile .PersonalInformation .not-empty-sec h1 {
+	font-size: 32px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.profile .ProfileContactInfo .not-empty-sec h1 .icon,
+.profile .PersonalInformation .not-empty-sec h1 .icon {
+	margin-right: 10px;
+}
+.profile .ProfileContactInfo .not-empty-sec .add-phone,
+.profile .PersonalInformation .not-empty-sec .add-address {
+	cursor: pointer;
+	transition: all var(--main-transition) ease-in-out;
+}
+.profile .ProfileContactInfo .not-empty-sec .phone-number .edit,
+.profile .PersonalInformation .not-empty-sec h1 .edit {
+	font-size: 19px;
+	height: 100%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.AlumniProfile .ProfileContactInfo .not-empty-sec .phone-number .edit,
+.AlumniProfile .PersonalInformation .not-empty-sec h1 .edit {
+	color: var(--Alumni-color);
+}
+.HRProfile .ProfileContactInfo .not-empty-sec .phone-number .edit,
+.HRProfile .PersonalInformation .not-empty-sec h1 .edit {
+	color: var(--HR-color);
+}
+.StudentProfile
+	.ProfileContactInfo
+	.not-empty-sec
+	.phone-number
+	.edit
+	.StudentProfile
+	.PersonalInformation
+	.not-empty-sec
+	h1
+	.edit {
+	color: var(--Student-color);
+}
+.AdminProfile .ProfileContactInfo .not-empty-sec .phone-number .edit,
+.AdminProfile .PersonalInformation .not-empty-sec h1 .edit {
+	color: var(--Admin-color);
+}
+.ProfessorProfile .ProfileContactInfo .not-empty-sec .phone-number .edit,
+.ProfessorProfile .PersonalInformation .not-empty-sec h1 .edit {
+	color: var(--Professor-color);
+}
+.AlumniProfile .ProfileContactInfo .not-empty-sec .add-phone:hover,
+.AlumniProfile .PersonalInformation .not-empty-sec .add-address:hover {
+	color: var(--Alumni-color) !important;
+}
+.HRProfile .ProfileContactInfo .not-empty-sec .add-phone:hover,
+.HRProfile .PersonalInformation .not-empty-sec .add-address:hover {
+	color: var(--HR-color) !important;
+}
+.StudentProfile .ProfileContactInfo .not-empty-sec .add-phone:hover,
+.StudentProfile .PersonalInformation .not-empty-sec .add-address:hover {
+	color: var(--Student-color) !important;
+}
+.AdminProfile .ProfileContactInfo .not-empty-sec .add-phone:hover,
+.AdminProfile .PersonalInformation .not-empty-sec .add-address:hover {
+	color: var(--Admin-color) !important;
+}
+.ProfessorProfile .ProfileContactInfo .not-empty-sec .add-phone:hover,
+.ProfessorProfile .PersonalInformation .not-empty-sec .add-address:hover {
+	color: var(--Professor-color) !important;
+}
+.profile .ProfileContactInfo .not-empty-sec a,
+.profile .PersonalInformation .not-empty-sec a {
+	text-decoration: none !important;
+	color: black;
+}
+.profile .ProfileContactInfo .email {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media (max-width: 767px) {
+	.profile .ProfileContactInfo .email {
+		font-size: 20px;
+	}
+}
+/* ---  */
+
+/* Profile skills  */
+.profile .sec-title .add {
+	right: 27px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.profile .addSkills .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+	border: none;
+}
+.profile .addSkills .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+	color: white !important;
+}
+.profile
+	.addSkills
+	.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+	color: rgb(250 175 0) !important;
+}
+.profile .addSkills .save {
+	color: black;
+	background-color: white;
+	border: none;
+}
+.profile .addSkills .save:hover {
+	background: rgb(250, 175, 0);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(250, 175, 0, 0.9417016806722689) 47%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(250, 175, 0, 0.9417016806722689) 47%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(250, 175, 0, 0.9417016806722689) 47%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#faaf00",endColorstr="#ffffff",GradientType=1);
+	color: white;
+}
+.profile
+	.addSkills
+	.css-2y464i-MuiInputBase-root-MuiFilledInput-root.Mui-focused:after {
+	border-bottom-color: rgb(250 175 0);
+}
+.profile .ProfileSkills .skillsList {
+	list-style: none;
+}
+.profile .ProfileSkills .skillsList .skill,
+.profile .addSkills .skill {
+	border-radius: var(--main-border-radius);
+}
+.AlumniProfile .ProfileSkills .skillsList .skill,
+.AlumniProfile .addSkills .skill {
+	background-color: var(--Alumni-color);
+}
+.HRProfile .ProfileSkills .skillsList .skill,
+.HRProfile .addSkills .skill {
+	background-color: var(--HR-color);
+}
+.AdminProfile .ProfileSkills .skillsList .skill,
+.AdminProfile .addSkills .skill {
+	background-color: var(--Admin-color);
+}
+.StudentProfile .ProfileSkills .skillsList .skill,
+.StudentProfile .addSkills .skill {
+	background-color: var(--Student-color);
+}
+.ProfessorProfile .ProfileSkills .skillsList .skill,
+.ProfessorProfile .addSkills .skill {
+	background-color: var(--Professor-color);
+}
+.profile .skill .star {
+	color: #fbc02d;
+}
+.profile .skill .title {
+	color: white;
+	font-weight: 500;
+	white-space: nowrap; /* Prevent line breaks */
+	width: 100px;
+	overflow: hidden; /* Hide overflowing content */
+	text-overflow: ellipsis; /* Display ellipsis (...) for truncated content */
+}
+/* ---  */
+
+/* Profile Edu  */
+.ProfileEdu .edu-list .row div:nth-of-type(2) h5 {
+	padding: 5px 15px;
+}
+.ProfileEdu .gpa,
+.ProfileEdu .status {
+	margin-top: 5px;
+}
+.ProfileEdu .gpa div:nth-of-type(2) h5,
+.ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: #0eab00;
+	display: inline;
+	border-radius: 19px;
+	color: white;
+}
+.AlumniProfile .ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: var(--Alumni-color);
+}
+.HRProfile .ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: var(--HR-color);
+}
+.StudentProfile .ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: var(--Student-color);
+}
+.AdminProfile .ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: var(--Admin-color);
+}
+.ProfessorProfile .ProfileEdu .status div:nth-of-type(2) h5 {
+	background-color: var(--Professor-color);
+}
+/* ---  */
+/* Profile cv */
+.ProfileCV .uploadCV,
+.ProfileCV .previewCV {
+	background-color: #bbbbbb;
+	border: 1px solid;
+	border-radius: 19px;
+	position: relative;
+}
+.ProfileCV .previewCV {
+	text-decoration: none;
+	color: #000000;
+}
+@media (max-width: 767px) {
+	.ProfileCV .uploadCV,
+	.ProfileCV .previewCV {
+		width: 70% !important;
+	}
+}
+/* ---  */
